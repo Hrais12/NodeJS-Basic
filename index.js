@@ -46,7 +46,11 @@ const server = http.createServer((req, res) => {
         res.write('<h1>About us</h2>')
         res.end();
 
-    }
+    }else {
+        res.statusCode = 404;
+        res.write('<h1>404 Not Found</h1>');
+        res.end('<p>The requested URL was not found on this server.</p>');
+      }
   });
 
     server.listen(port, hostname, () => {
