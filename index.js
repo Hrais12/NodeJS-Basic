@@ -37,7 +37,7 @@ const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html');
 
-    if (req.url === '/') {
+    if (req.url === '/') {                                   //The default route (/) renders the same content as before.
     res.write('<h1 style="color: red">Hello World!</h1>');
     res.write('<p>I wonder what else we can send...</p>');
     res.end();
